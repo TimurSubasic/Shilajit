@@ -67,3 +67,72 @@ body{
   color: white;
 }
 
+#contact-page img{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 4rem;
+}
+
+.flex-contact{
+  text-align: center;
+  margin-top: 30px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10%;
+  min-width: 320px;
+}
+
+#contact-page .container{
+  min-height: 70vh;
+}
+
+@media(max-width: 1200px){
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .contact-1{
+    grid-column: span 2;
+  }
+
+  .contact-2{
+    grid-column: span 2;
+  }
+
+  .contact-3{
+    grid-column: span 4;
+  }
+
+}
+
+@media(max-width: 800px){
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .contact-1{
+    grid-column: span 1;
+  }
+
+  .contact-2{
+    grid-column: span 1;
+  }
+
+  .contact-3{
+    grid-column: span 1;
+  }
+
+}
