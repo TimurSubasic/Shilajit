@@ -39,6 +39,8 @@ body{
 #hero img{
     height: 300px;
     width: 300px;
+    border-radius: 10%;
+    max-width: 119%;
 }
 
 #start{
@@ -64,21 +66,4 @@ body{
 #footer a{
   color: white;
 }
-
-#hero-img{
-  text-align: center;
-}
-
-
-
-
-#checkout-shila{
-  border-radius: 20%;
-  height: 250px;
-  width: auto;
-}
-
-
-
-
 
