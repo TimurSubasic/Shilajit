@@ -98,20 +98,12 @@ body{
 @media(max-width: 1200px){
   .grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
 
-  .contact-1{
-    grid-column: span 2;
-  }
-
-  .contact-2{
-    grid-column: span 2;
-  }
-
   .contact-3{
-    grid-column: span 4;
+    grid-column: span 2;
   }
 
 }
@@ -123,16 +115,9 @@ body{
     grid-template-rows: 1fr 1fr 1fr;
   }
 
-  .contact-1{
-    grid-column: span 1;
-  }
-
-  .contact-2{
-    grid-column: span 1;
-  }
-
   .contact-3{
     grid-column: span 1;
   }
 
 }
+
