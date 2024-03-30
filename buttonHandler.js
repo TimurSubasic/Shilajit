@@ -39,6 +39,6 @@ $("#btn-two").click(function(){
 
     
 $("#btn-buy").click(function(){        
-    window.location.href = "#";
+    window.location.href = "buy.html";
 });
  
