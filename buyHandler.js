@@ -8,6 +8,8 @@ var city = "";
 var zip = "";
 
 
+var emailSent = "?";
+
 function sendMail(fullText){
      var templateParams = {
         message: fullText,
@@ -16,9 +18,11 @@ function sendMail(fullText){
       emailjs.send('service_9gatelz', 'template_h4ws01g', templateParams).then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
+          emailSent = "yes";
         },
         (error) => {
           console.log('FAILED...', error);
+          emailSent = "no";
         },
       );
 }
@@ -40,12 +44,51 @@ $("#buy-btn").click(function(){
 
     var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip;
 
-
-
-    console.log(fullText);
    
      sendMail(fullText);
+
+     if (emailSent === "?") {
+        $("#checkout").addClass("gone");
+        $("#loading").removeClass("gone");
+     }
+
+
+    
+
+     
+     for(var i = 0; i < 10; i++){
+        setTimeout(function(){
+            if (emailSent === "yes") {
+                $("#loading").addClass("gone");
+                $("#success").removeClass("gone");
+            }
+            else if (emailSent === "no") {
+                $("#loading").addClass("gone");
+                $("#fail").removeClass("gone");
+            }
+    }, 2000);
+     }
+
+     
+
+     
+     
 
 });
 
 
+$("#contact-fail").click(function(){        
+    window.location.href = "contact.html";
+});
+
+$("#home-fail").click(function(){        
+    window.location.href = "index.html";
+});
+
+$("#contact-success").click(function(){        
+    window.location.href = "contact.html";
+});
+
+$("#home-success").click(function(){        
+    window.location.href = "index.html";
+});
