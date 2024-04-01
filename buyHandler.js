@@ -66,7 +66,7 @@ $("#buy-btn").click(function(){
 
     
 
-    var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip+"\n Količina Shilajita: "+amount;
+    var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip+"\n Količina Shilajita 25g: "+amount25+"\n Količina Shilajita 50g: "+amount50;
 
    
      sendMail(fullText);
