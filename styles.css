@@ -1,5 +1,6 @@
 body{
   background-color: #dff5ff;
+  min-height: 85vh;
 }
 
 #header span{
@@ -126,22 +127,10 @@ body{
 }
 
 
-#loading{
-  height: 90vh;
-  ;
-}
-
 #loading > div{
   height: 100%;
 }
 
-#fail{
-  min-height: 90vh;
-}
-
-#success{
-  min-height: 90vh;
-}
 
 #shila{
   border-radius: 50%;
