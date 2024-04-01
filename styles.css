@@ -1,6 +1,5 @@
 body{
   /* background-color: #dff5ff; */
-
   background-color: #C0D6E8;
 }
 
@@ -153,3 +152,28 @@ body{
   min-height: 85vh;
 }
 
+
+
+#bill-div{
+  width: 70%;
+  margin-left: 15%;
+}
+
+.card-img{
+  height: 100%;
+  width: 100%;
+  border-radius: 15%;
+}
+
+.item-handler{
+  width: 40px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  margin: 10px;
+  margin-bottom: 0px;
+}
+
+#final-bill{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

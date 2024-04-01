@@ -7,6 +7,9 @@ var country = "";
 var city = "";
 var zip = "";
 
+var amount = "";
+var totalPrice = "";
+
 
 var emailSent = "?";
 
@@ -102,6 +105,26 @@ $("#home-success").click(function(){
 });
 
 
+
+$("#btn-add").click(function(){
+  amount = Number($("#amount").text());
+  amount = amount + 1;
+  $("#amount").text(amount);
+  totalPrice = 40 * amount;
+  $("#total-price").text(totalPrice);
+  $("#bill-amount").text(amount);
+});
+
+$("#btn-subb").click(function(){
+  amount = Number($("#amount").text());
+  if(amount > 1){
+    amount = amount - 1;
+  $("#amount").text(amount);
+  }
+  totalPrice = 40 * amount;
+  $("#total-price").text(totalPrice);
+  $("#bill-amount").text(amount);
+});
 
 
 
