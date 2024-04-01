@@ -125,8 +125,3 @@ $("#btn-subb").click(function(){
   $("#total-price").text(totalPrice);
   $("#bill-amount").text(amount);
 });
-
-
-
-
-
