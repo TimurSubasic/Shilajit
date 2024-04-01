@@ -1,5 +1,6 @@
 body{
-  background-color: #dff5ff;
+  /*background-color: #dff5ff; */
+  background-color: #ACE2E1;
   min-height: 85vh;
 }
 
@@ -135,3 +136,4 @@ body{
 #shila{
   border-radius: 50%;
 }
+
