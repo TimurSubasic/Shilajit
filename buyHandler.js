@@ -13,8 +13,6 @@ var amount50 = "0";
 var totalPrice = "0";
 
 
-// var emailSent = "?";
-
 function sendMail(fullText){
      var templateParams = {
         message: fullText,
@@ -24,38 +22,16 @@ function sendMail(fullText){
         (response) => {
           $("#loading").addClass("gone");
           $("#success").removeClass("gone");
-         // emailSent = "yes";
           console.log('SUCCESS!', response.status, response.text);          
         },
         (error) => {
           $("#loading").addClass("gone");
           $("#fail").removeClass("gone");
-          // emailSent = "no";
           console.log('FAILED...', error);          
         },
       );
 }
 
-/*
-function checkEmail(){
-
-       
-            if (emailSent === "yes") {
-                $("#loading").addClass("gone");
-                $("#success").removeClass("gone");
-                return false;
-            }
-            else if (emailSent === "no") {
-                $("#loading").addClass("gone");
-                $("#fail").removeClass("gone");
-                return false;
-            }
-            else{
-              return true;
-            }
-  
-}
-*/
 
 $("#buy-btn").click(function(){
 
@@ -81,23 +57,7 @@ $("#buy-btn").click(function(){
         
      sendMail(fullText);
 
-     
 
-     /*
-     for(var i = 0; i < 15; i++){
-
-      setTimeout(function(){
-
-        check = checkEmail();
-
-      }, 2000);
-
-      if(check) {
-        return;
-      }
-     
-     }
-    */
 
 });
 
