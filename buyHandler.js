@@ -13,7 +13,7 @@ var amount50 = "0";
 var totalPrice = "0";
 
 
-var emailSent = "?";
+// var emailSent = "?";
 
 function sendMail(fullText){
      var templateParams = {
@@ -22,16 +22,21 @@ function sendMail(fullText){
       
       emailjs.send('service_9gatelz', 'template_h4ws01g', templateParams).then(
         (response) => {
-          emailSent = "yes";
+          $("#loading").addClass("gone");
+          $("#success").removeClass("gone");
+         // emailSent = "yes";
           console.log('SUCCESS!', response.status, response.text);          
         },
         (error) => {
-          emailSent = "no";
+          $("#loading").addClass("gone");
+          $("#fail").removeClass("gone");
+          // emailSent = "no";
           console.log('FAILED...', error);          
         },
       );
 }
 
+/*
 function checkEmail(){
 
        
@@ -50,7 +55,7 @@ function checkEmail(){
             }
   
 }
-
+*/
 
 $("#buy-btn").click(function(){
 
@@ -69,15 +74,16 @@ $("#buy-btn").click(function(){
     var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip+"\n Količina Shilajita 25g: "+amount25+"\n Količina Shilajita 50g: "+amount50;
 
    
-     sendMail(fullText);
-
-     if (emailSent === "?") {
+     
         $("#checkout").addClass("gone");
         $("#loading").removeClass("gone");
-     }
+     
+        
+     sendMail(fullText);
 
      
 
+     /*
      for(var i = 0; i < 15; i++){
 
       setTimeout(function(){
@@ -91,7 +97,7 @@ $("#buy-btn").click(function(){
       }
      
      }
-    
+    */
 
 });
 
