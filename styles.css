@@ -136,11 +136,11 @@ body{
 }
 
 #fail{
-  height: 90vh;
+  min-height: 90vh;
 }
 
 #success{
-  height: 90vh;
+  min-height: 90vh;
 }
 
 #shila{
