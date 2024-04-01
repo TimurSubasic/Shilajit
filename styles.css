@@ -139,6 +139,10 @@ body{
   height: 90vh;
 }
 
+#success{
+  height: 90vh;
+}
+
 #shila{
   border-radius: 50%;
 }

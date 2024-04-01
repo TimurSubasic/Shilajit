@@ -17,14 +17,36 @@ function sendMail(fullText){
       
       emailjs.send('service_9gatelz', 'template_h4ws01g', templateParams).then(
         (response) => {
-          console.log('SUCCESS!', response.status, response.text);
           emailSent = "yes";
+          console.log('SUCCESS!', response.status, response.text);          
         },
         (error) => {
-          console.log('FAILED...', error);
           emailSent = "no";
+          console.log('FAILED...', error);          
         },
       );
+}
+
+function checkEmail(){
+
+  
+    for(var i = 0; i < 15; i++){
+        setTimeout(function(){
+            if (emailSent === "yes") {
+                $("#loading").addClass("gone");
+                $("#success").removeClass("gone");
+                return;
+            }
+            else if (emailSent === "no") {
+                $("#loading").addClass("gone");
+                $("#fail").removeClass("gone");
+                return;
+            }
+    }, 2000);
+     }
+  
+
+  
 }
 
 
@@ -52,27 +74,13 @@ $("#buy-btn").click(function(){
         $("#loading").removeClass("gone");
      }
 
+     
 
+     checkEmail();
+
+     
+     
     
-
-     
-     for(var i = 0; i < 10; i++){
-        setTimeout(function(){
-            if (emailSent === "yes") {
-                $("#loading").addClass("gone");
-                $("#success").removeClass("gone");
-            }
-            else if (emailSent === "no") {
-                $("#loading").addClass("gone");
-                $("#fail").removeClass("gone");
-            }
-    }, 2000);
-     }
-
-     
-
-     
-     
 
 });
 
@@ -92,3 +100,10 @@ $("#contact-success").click(function(){
 $("#home-success").click(function(){        
     window.location.href = "index.html";
 });
+
+
+
+
+
+
+
