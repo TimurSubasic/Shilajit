@@ -6,6 +6,7 @@ var address = "";
 var country = "";
 var city = "";
 var zip = "";
+var check = false;
 
 var amount = "1";
 var totalPrice = "40";
@@ -32,23 +33,20 @@ function sendMail(fullText){
 
 function checkEmail(){
 
-  
-    for(var i = 0; i < 15; i++){
-        setTimeout(function(){
+       
             if (emailSent === "yes") {
                 $("#loading").addClass("gone");
                 $("#success").removeClass("gone");
-                return;
+                return false;
             }
             else if (emailSent === "no") {
                 $("#loading").addClass("gone");
                 $("#fail").removeClass("gone");
-                return;
+                return false;
             }
-    }, 2000);
-     }
-  
-
+            else{
+              return true;
+            }
   
 }
 
@@ -79,10 +77,19 @@ $("#buy-btn").click(function(){
 
      
 
-     checkEmail();
+     for(var i = 0; i < 15; i++){
 
+      setTimeout(function(){
+
+        check = checkEmail();
+
+      }, 2000);
+
+      if(check) {
+        return;
+      }
      
-     
+     }
     
 
 });
