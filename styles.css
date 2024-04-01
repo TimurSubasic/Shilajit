@@ -1,7 +1,7 @@
 body{
-  /*background-color: #dff5ff; */
-  background-color: #ACE2E1;
-  min-height: 85vh;
+  /* background-color: #dff5ff; */
+
+  background-color: #C0D6E8;
 }
 
 #header span{
@@ -128,12 +128,28 @@ body{
 }
 
 
+#loading{
+  height: 90vh;
+  ;
+}
+
 #loading > div{
   height: 100%;
 }
 
+#fail{
+  height: 90vh;
+}
+
+#success{
+  height: 90vh;
+}
 
 #shila{
   border-radius: 50%;
+}
+
+#contact-page > div{
+  min-height: 85vh;
 }
 
