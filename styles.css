@@ -101,6 +101,10 @@ body{
   min-width: 320px;
 }
 
+.contact-3{
+  margin-bottom: 30px;
+}
+
 #contact-page .container{
   min-height: 70vh;
 }

@@ -8,8 +8,9 @@ var city = "";
 var zip = "";
 var check = false;
 
-var amount = "1";
-var totalPrice = "40";
+var amount25 = "0";
+var amount50 = "0";
+var totalPrice = "0";
 
 
 var emailSent = "?";
@@ -112,23 +113,50 @@ $("#home-success").click(function(){
 });
 
 
+function getTotal(){
 
-$("#btn-add").click(function(){
-  amount = Number($("#amount").text());
-  amount = amount + 1;
-  $("#amount").text(amount);
-  totalPrice = 40 * amount;
+  return totalPrice = (Number(amount25) * 90) + (Number(amount50) * 150);
+
+}
+
+
+$("#btn-add-25").click(function(){
+  amount25 = Number($("#amount-25").text());
+  amount25 = amount25 + 1;
+  $("#amount-25").text(amount25);
+  totalPrice = getTotal();
   $("#total-price").text(totalPrice);
-  $("#bill-amount").text(amount);
+  $("#bill-amount").text(Number(amount50)+ Number(amount25));
 });
 
-$("#btn-subb").click(function(){
-  amount = Number($("#amount").text());
-  if(amount > 1){
-    amount = amount - 1;
-  $("#amount").text(amount);
+$("#btn-subb-25").click(function(){
+  amount25 = Number($("#amount-25").text());
+  if(amount25 > 0){
+    amount25 = amount25 - 1;
+  $("#amount-25").text(amount25);
   }
-  totalPrice = 40 * amount;
+  totalPrice = getTotal();
   $("#total-price").text(totalPrice);
-  $("#bill-amount").text(amount);
+  $("#bill-amount").text(Number(amount50)+ Number(amount25));
+});
+
+
+$("#btn-add-50").click(function(){
+  amount50 = Number($("#amount-50").text());
+  amount50 = amount50 + 1;
+  $("#amount-50").text(amount50);
+  totalPrice = getTotal();
+  $("#total-price").text(totalPrice);
+  $("#bill-amount").text(Number(amount50)+ Number(amount25));
+});
+
+$("#btn-subb-50").click(function(){
+  amount50 = Number($("#amount-50").text());
+  if(amount50 > 0){
+    amount50 = amount50 - 1;
+  $("#amount-50").text(amount50);
+  }
+  totalPrice = getTotal();
+  $("#total-price").text(totalPrice);
+  $("#bill-amount").text(Number(amount50)+ Number(amount25));
 });
