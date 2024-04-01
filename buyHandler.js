@@ -7,8 +7,8 @@ var country = "";
 var city = "";
 var zip = "";
 
-var amount = "";
-var totalPrice = "";
+var amount = "1";
+var totalPrice = "40";
 
 
 var emailSent = "?";
@@ -67,7 +67,7 @@ $("#buy-btn").click(function(){
 
     
 
-    var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip;
+    var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip+"\n Količina Shilajita: "+amount;
 
    
      sendMail(fullText);
