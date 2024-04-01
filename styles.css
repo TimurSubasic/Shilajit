@@ -2,6 +2,14 @@ body{
   /* background-color: #dff5ff; */
 
   background-color: #C0D6E8;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer {
+  margin-top: auto;
 }
 
 #header span{
@@ -129,21 +137,9 @@ body{
 
 
 #loading{
-  height: 90vh;
-  ;
+  margin-top: 80px;
 }
 
-#loading > div{
-  height: 100%;
-}
-
-#fail{
-  height: 90vh;
-}
-
-#success{
-  height: 90vh;
-}
 
 #shila{
   border-radius: 50%;
@@ -152,4 +148,3 @@ body{
 #contact-page > div{
   min-height: 85vh;
 }
-
