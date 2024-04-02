@@ -149,6 +149,15 @@ $("#buy-btn").click(function(){
       cityOk = 0;
       zipOk = 0;
       billOk = 0;
+
+      $("#buy-btn").addClass("btn-danger");
+      $("#buy-btn").text("Unesite Podatke");
+
+      setTimeout(function(){
+        $("#buy-btn").removeClass("btn-danger");
+        $("#buy-btn").text("Naručite");
+      },4000)
+
     }
 
     
