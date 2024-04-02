@@ -185,3 +185,15 @@ body{
 .contact-name{
   margin: 15px;
 }
+
+.mistake::placeholder{
+  color: red;
+}
+
+.red-text{
+  color: red;
+}
+
+.normal-text{
+  color: black;
+}
