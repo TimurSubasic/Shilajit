@@ -156,7 +156,7 @@ $("#buy-btn").click(function(){
       setTimeout(function(){
         $("#buy-btn").removeClass("btn-danger");
         $("#buy-btn").text("Naručite");
-      },4000)
+      },2750);
 
     }
 
