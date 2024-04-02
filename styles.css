@@ -77,12 +77,10 @@ body{
   color: white;
 }
 
-#contact-page img{
-  height: 150px;
-  width: 150px;
+.contact-img{
+  height: 170px;
+  width: 170px;
   border-radius: 50%;
-  margin-bottom: 15px;
-
 }
 
 .grid{
@@ -94,16 +92,12 @@ body{
 
 .flex-contact{
   text-align: center;
-  margin-top: 30px;
   padding: 40px;
   background-color: white;
   border-radius: 10%;
   min-width: 320px;
 }
 
-.contact-3{
-  margin-bottom: 30px;
-}
 
 #contact-page .container{
   min-height: 70vh;
@@ -177,4 +171,17 @@ body{
 #final-bill{
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.contact-svg{
+  height: 20px;
+  margin-right: 5px;
+}
+
+.contact-btn{
+  width: 170px;
+}
+
+.contact-name{
+  margin: 15px;
 }
