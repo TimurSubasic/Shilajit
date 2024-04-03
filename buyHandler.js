@@ -6,6 +6,7 @@ var address = "";
 var country = "";
 var city = "";
 var zip = "";
+var userMessage = "";
 
 var fNameOk = 0;
 var lNameOk = 0;
@@ -51,6 +52,30 @@ function checkMail(){
   }
 }
 
+function hasNumber(string) {
+  // Define the regular expression pattern to match any digit
+  var pattern = /\d/;
+  // Use test() method to check if the pattern exists in the string
+  return pattern.test(string);
+}
+
+function checkZip(text) {
+  // Define the regular expression pattern to match any alphabetic character
+  var pattern = /[a-zA-Z]/;
+  // Use test() method to check if the pattern exists in the string
+  if(pattern.test(text)){
+    return true;
+  }
+  else{
+    if( text.length == 5 ){
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+}
+
 
 function checkBuy(){
 
@@ -59,15 +84,33 @@ function checkBuy(){
       $("#firstName").addClass("mistake");
     }
     else{
-      fNameOk = 1;
+      if(hasNumber(fName)){
+        $("#firstName").attr("placeholder", "Unesite validno ime");
+        $("#firstName").addClass("mistake");
+        $("#firstName").val("");
+      }
+      else{
+        fNameOk = 1;
+      }
+      
     }
     if(lName === ""){
       $("#lastName").attr("placeholder", "Unesite prezime");
       $("#lastName").addClass("mistake");
     }
     else{
-      lNameOk = 1;
+      if(hasNumber(lName)){
+        $("#lastName").attr("placeholder", "Unesite validno prezime");
+        $("#lastName").addClass("mistake");
+        $("#lastName").val("");
+      }
+      else{
+        lNameOk = 1;
+      }
+      
     }
+
+
     if(email === ""){
       $("#email").attr("placeholder", "Unesite E-Mail");
       $("#email").addClass("mistake");
@@ -75,6 +118,7 @@ function checkBuy(){
     else {    
       checkMail();
     }
+
     if(address === ""){
       $("#address").attr("placeholder", "Unesite agresu stanovanja");
       $("#address").addClass("mistake");
@@ -82,19 +126,29 @@ function checkBuy(){
     else{
       addressOk = 1;
     }
+    
     if(zip === ""){
       $("#zip").attr("placeholder", "Unesite poštanski broj");
       $("#zip").addClass("mistake");
     }
     else{
-      zipOk = 1;
+      if(checkZip(zip)){
+        $("#zip").attr("placeholder", "Potreban je ispravan broj");
+        $("#zip").addClass("mistake");
+        $("#zip").val("");
+      }
+      else{
+        zipOk = 1;
+      }     
     }
+
     if($("#bill-amount").text() === "0"){
       alert("Izaberite Vaš proizvod")
     }
     else{
       billOk = 1;
     }
+
     if(city === "Izaberite..."){
       $("#city").addClass("red-text");
     }
@@ -127,10 +181,11 @@ $("#buy-btn").click(function(){
     country = $("#country").find(":selected").text();
     city = $("#city").find(":selected").text();
     zip = $("#zip").val();
+    userMessage = $("#message").val();
 
 
     if (checkBuy() == 7){
-      var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip+"\n Količina Shilajita 25g: "+amount25+"\n Količina Shilajita 50g: "+amount50;
+      var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip+"\n Količina Shilajita 25g: "+amount25+"\n Količina Shilajita 50g: "+amount50+"\n \n Poruka: \n"+userMessage;
 
    
      
