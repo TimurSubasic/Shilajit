@@ -302,11 +302,13 @@ $(document).ready(function(){
 });
 
 $("#get-shipping").click(function(){
-  shipping = 4.5;
+  if(Number(totalPrice) > 0){
+    shipping = 4.5;
   if(Number(totalPrice) > 100){
     shipping += (Number(totalPrice)-100) * 0.01;
   }
 
   $("#total-price").text(Number(totalPrice)+shipping);
   $("#ship-text").text("");
+  } 
 });
