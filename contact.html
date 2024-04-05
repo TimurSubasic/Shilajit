@@ -72,7 +72,7 @@
                     <h2 class="contact-name">Earth Soul</h2>
                     <p><a class="btn btn-outline-dark rounded-pill contact-btn" href="https://www.instagram.com/earthsoul.sa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="./images/instagram.svg" class="contact-svg" alt=""> Instagram</a></p>
                     <p><a class="btn btn-outline-dark rounded-pill contact-btn" href=""><img src="./images/envelope-at.svg" class="contact-svg" alt=""> E-Mail</a></p>
-                    <p><a class="btn btn-outline-dark rounded-pill contact-btn" href=""><img src="./images/telephone-forward.svg" class="contact-svg" alt=""> Pozovite</a></p>
+                    <p><a class="btn btn-outline-dark rounded-pill contact-btn" data-bs-toggle="modal" data-bs-target="#contact-modal"><img src="./images/telephone-forward.svg" class="contact-svg" alt=""> Pozovite</a></p>
                 </div>
 
                 <div class="flex-contact contact-2 shadow-lg m-3">
@@ -97,6 +97,29 @@
 
     </section>
 
+
+    <section id="modal-template">
+
+      <div class="modal" tabindex="-1" id="contact-modal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Pozovite</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Namik Alibašić: <a class="btn btn-outline-dark rounded-pill modal-btn" href="tel:+38761023883"><img src="./images/telephone-forward.svg" class="contact-svg" alt=""> +387 61 023 883</a></p>
+              <br>
+              <p>Timur Subašić: <a class="btn btn-outline-dark rounded-pill modal-btn" href="tel:+387603192617"><img src="./images/telephone-forward.svg" class="contact-svg" alt=""> +387 60 31 92 617</a></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Odustani</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
 
 
 

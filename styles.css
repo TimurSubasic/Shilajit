@@ -197,3 +197,7 @@ body{
 .normal-text{
   color: black;
 }
+ 
+.modal-btn{
+  margin: 0px 5px;
+} 
