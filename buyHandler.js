@@ -19,6 +19,7 @@ var billOk = 0;
 var amount25 = "0";
 var amount50 = "0";
 var totalPrice = "0";
+var shipping = 0;
 
 
 function sendMail(fullText){
@@ -252,6 +253,7 @@ $("#btn-add-25").click(function(){
   $("#amount-25").text(amount25);
   totalPrice = getTotal();
   $("#total-price").text(totalPrice);
+  $("#ship-text").text(" + dostava");
   $("#bill-amount").text(Number(amount50)+ Number(amount25));
 });
 
@@ -263,6 +265,7 @@ $("#btn-subb-25").click(function(){
   }
   totalPrice = getTotal();
   $("#total-price").text(totalPrice);
+  $("#ship-text").text(" + dostava");
   $("#bill-amount").text(Number(amount50)+ Number(amount25));
 });
 
@@ -273,6 +276,7 @@ $("#btn-add-50").click(function(){
   $("#amount-50").text(amount50);
   totalPrice = getTotal();
   $("#total-price").text(totalPrice);
+  $("#ship-text").text(" + dostava");
   $("#bill-amount").text(Number(amount50)+ Number(amount25));
 });
 
@@ -284,6 +288,7 @@ $("#btn-subb-50").click(function(){
   }
   totalPrice = getTotal();
   $("#total-price").text(totalPrice);
+  $("#ship-text").text(" + dostava");
   $("#bill-amount").text(Number(amount50)+ Number(amount25));
 });
 
@@ -294,4 +299,14 @@ $(document).ready(function(){
         scrollTop: $("#scrollSpyBill").offset().top
     }, 700); // Change the duration as needed
   });
+});
+
+$("#get-shipping").click(function(){
+  shipping = 4.5;
+  if(Number(totalPrice) > 100){
+    shipping += (Number(totalPrice)-100) * 0.01;
+  }
+
+  $("#total-price").text(Number(totalPrice)+shipping);
+  $("#ship-text").text("");
 });

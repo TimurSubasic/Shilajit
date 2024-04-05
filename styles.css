@@ -201,3 +201,9 @@ body{
 .modal-btn{
   margin: 0px 5px;
 } 
+
+#buy-img{
+  width: 200px;
+  border-radius: 25%;
+}
+
