@@ -143,7 +143,7 @@ function checkBuy(){
     }
 
     if($("#bill-amount").text() === "0"){
-      alert("Izaberite Vaš proizvod")
+     $("#buy-modal").modal("show");
     }
     else{
       billOk = 1;
@@ -285,4 +285,13 @@ $("#btn-subb-50").click(function(){
   totalPrice = getTotal();
   $("#total-price").text(totalPrice);
   $("#bill-amount").text(Number(amount50)+ Number(amount25));
+});
+
+
+$(document).ready(function(){
+  $("#back-to-buy").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#scrollSpyBill").offset().top
+    }, 700); // Change the duration as needed
+  });
 });

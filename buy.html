@@ -74,7 +74,7 @@
 
               
               <div class="row g-4">
-                <div class="col-md-5 col-lg-4 order-md-last">
+                <div class="col-md-5 col-lg-4 order-md-last" id="scrollSpyBill">
                   <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-primary">Vaš račun</span>
                     <span class="badge bg-primary rounded-pill" id="bill-amount">0</span>
@@ -367,6 +367,29 @@
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
         <button type="button" class="btn btn-primary btn-lg px-4 gap-3" id="home-success">Početna</button>
         <button type="button" class="btn btn-outline-secondary btn-lg px-4" id="contact-success">Kontakt</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<section id="noinput-modal">
+
+  <div class="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" id="buy-modal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Greška</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Niste izabrali Vaš proizvod.</p>
+        </div>
+        <div class="modal-footer">
+          <button  class="btn btn-primary" data-bs-dismiss="modal" id="back-to-buy">Izaberite</a>
+        </div>
       </div>
     </div>
   </div>
