@@ -186,7 +186,7 @@ $("#buy-btn").click(function(){
 
 
     if (checkBuy() == 7){
-      var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip+"\n Količina Shilajita 25g: "+amount25+"\n Količina Shilajita 50g: "+amount50+"\n \n Poruka: \n"+userMessage;
+      var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip+"\n\n\n Količina Shilajita 25g: "+amount25+"\n\n Količina Shilajita 50g: "+amount50+"\n\n Ukupna cijena: "+totalPrice+" KM"+"\n\n\n Poruka: \n"+userMessage;
 
    
      
@@ -212,7 +212,7 @@ $("#buy-btn").click(function(){
       setTimeout(function(){
         $("#buy-btn").removeClass("btn-danger");
         $("#buy-btn").text("Naručite");
-      },2750);
+      },2600);
 
     }
 
@@ -293,13 +293,13 @@ $("#btn-subb-50").click(function(){
 });
 
 
-$(document).ready(function(){
+
   $("#back-to-buy").click(function() {
     $('html, body').animate({
         scrollTop: $("#scrollSpyBill").offset().top
     }, 700); // Change the duration as needed
   });
-});
+
 
 $("#get-shipping").click(function(){
   if(Number(totalPrice) > 0){

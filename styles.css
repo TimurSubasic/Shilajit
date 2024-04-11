@@ -40,11 +40,6 @@ body{
   font-style: normal;
 }
 
-#hero-cont{
-  background-color: white;
-  margin-left: 1px;
-  margin-right: 1px;
-}
 
 #hero img{
     height: 300px;
@@ -207,3 +202,23 @@ body{
   border-radius: 25%;
 }
 
+#use-img{
+  height: 300px;
+  width: 300px;
+  border-radius: 10%;
+  max-width: 119%;
+}
+
+.use-head{
+  font-weight: 630;
+}
+
+#use-btn{
+  width: 85%;
+}
+
+.white-back{
+  background-color: white;
+  margin-left: 1px;
+  margin-right: 1px;
+}

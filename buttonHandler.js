@@ -2,7 +2,7 @@
 
 $("#btn-one").click(function(){
     if($("#btn-one").text() == "Šta je Shilajit?"){
-        $("#para-info").text("Shilajit je prirodni supstrat koji se sastoji od slojeva organskog materijala i minerala, kompresovanih kroz stoljeća u stijenama visokih planinskih lanaca poput Himalaja. Ovaj tamni, smolasti materijal poznat je po svojoj bogatoj koncentraciji fulvinske kiseline i više od 85 minerala u jonskom obliku, što ga čini izuzetno nutritivno bogatim.");
+        $("#para-info").text("Shilajit(Mumija, Moomiyo, Mummiyo) je prirodni supstrat koji se sastoji od slojeva organskog materijala i minerala, kompresovanih kroz stoljeća u stijenama visokih planinskih lanaca poput Himalaja. Ovaj tamni, smolasti materijal poznat je po svojoj bogatoj koncentraciji fulvinske kiseline i više od 85 minerala u jonskom obliku, što ga čini izuzetno nutritivno bogatim.");
         $("#btn-one").text("Beneficije");
         $("#btn-two").text("Zašto?");
         $("#hero-naslov").text("Šta je Shilajit");
@@ -20,7 +20,8 @@ $("#btn-one").click(function(){
 
 $("#btn-two").click(function(){
     if($("#btn-two").text() == "Zašto?"){
-        $("#para-info").text("Obzirom da je potentan i moćan, čisti shilajit će biti vaša prva doza za bolji i zdraviji način života. Forma smole je najčišća forma shilajita i dolazi sa visokih stijena Himalaja. Ne sadrži nikakve hemikalije niti dodatne sastojke.");
+        $("#para-info").text("Obzirom da je potentan i moćan, čisti shilajit će biti vaša prva doza za bolji i zdraviji način života. Forma smole je najčišća forma shilajita i dolazi sa visokih stijena Himalaja. Ne sadrži nikakve hemikalije niti dodatne sastojke. Ukoliko želite da znate ostale informacije o ovom nevjerovatnom proizvodu kao što je način upotrebe, ostali benefiti i cijena možete da pritisnete ");
+        $("#para-info").append("<a class=' btn btn-outline-dark rounded-pill ' href= ' info.html '>ovdje.</a>");
         $("#btn-one").text("Šta je Shilajit?");
         $("#btn-two").text("Beneficije");
         $("#hero-naslov").text("Zašto čisti shilajit");
@@ -35,10 +36,3 @@ $("#btn-two").click(function(){
     }
 });
 
-
-
-    
-$("#btn-buy").click(function(){        
-    window.location.href = "buy.html";
-});
- 
