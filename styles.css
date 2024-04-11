@@ -206,7 +206,8 @@ body{
   height: 300px;
   width: 300px;
   border-radius: 10%;
-  max-width: 119%;
+  max-width: 100%;
+  height: auto;
 }
 
 .use-head{
@@ -221,9 +222,4 @@ body{
   background-color: white;
   margin-left: 1px;
   margin-right: 1px;
-}
-
-#use img{
-  max-width: 100%;
-  height: auto;
 }
