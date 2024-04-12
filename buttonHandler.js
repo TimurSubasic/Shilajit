@@ -6,14 +6,14 @@ $("#btn-one").click(function(){
         $("#btn-one").text("Beneficije");
         $("#btn-two").text("Zašto?");
         $("#hero-naslov").text("Šta je Shilajit");
-        $("#hero img").attr("src", "images/Shila-Smola.png");
+        $("#hero img").attr("src", "images/stae-shila.png");
     }
     else{
         $("#para-info").text("Tradicionalno se cijeni u ayurvedskoj medicini zbog svojih adaptogenih svojstava, sposobnosti poboljšanja energije, vitalnosti i fizičkog oporavka, kao i podrške za mentalne funkcije. Shilajit se koristi i za unapređenje općeg zdravlja, jačanje imunološkog sistema, poboljšanje seksualnog zdravlja, te kao sredstvo za balansiranje šećera u krvi i smanjenje upalnih procesa u tijelu.");
         $("#btn-one").text("Šta je Shilajit?");
         $("#btn-two").text("Zašto?");
         $("#hero-naslov").text("Benificije Shilajita");
-        $("#hero img").attr("src", "images/Shila-Kamen.png");
+        $("#hero img").attr("src", "images/benefit-shila.png");
     }
 });
 
@@ -25,14 +25,14 @@ $("#btn-two").click(function(){
         $("#btn-one").text("Šta je Shilajit?");
         $("#btn-two").text("Beneficije");
         $("#hero-naslov").text("Zašto čisti shilajit");
-        $("#hero img").attr("src", "images/Shila-Upotreba.png");
+        $("#hero img").attr("src", "images/zasto-shila.png");
     }
     else{
         $("#para-info").text("Tradicionalno se cijeni u ayurvedskoj medicini zbog svojih adaptogenih svojstava, sposobnosti poboljšanja energije, vitalnosti i fizičkog oporavka, kao i podrške za mentalne funkcije. Shilajit se koristi i za unapređenje općeg zdravlja, jačanje imunološkog sistema, poboljšanje seksualnog zdravlja, te kao sredstvo za balansiranje šećera u krvi i smanjenje upalnih procesa u tijelu.");
         $("#btn-one").text("Šta je Shilajit?");
         $("#btn-two").text("Zašto?");
         $("#hero-naslov").text("Benificije Shilajita");
-        $("#hero img").attr("src", "images/Shila-Kamen.png");
+        $("#hero img").attr("src", "images/benefit-shila.png");
     }
 });
 
