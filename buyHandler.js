@@ -138,6 +138,7 @@ function checkBuy(){
     else{
       if(checkZip(zip)){
         zipOk = 1;
+        zipMistakeCount = 0;
       }
       else{
         $("#zip").attr("placeholder", "Potreban je ispravan broj");
