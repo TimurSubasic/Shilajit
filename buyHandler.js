@@ -189,7 +189,7 @@ $("#buy-btn").click(function(){
       var fullText = "Ime: "+fName+"\n Prezime: "+lName+"\n Email: "+email+"\n Broj telefona: "+phone+"\n Adresa: "+address+"\n Država: "+country+"\n Grad: "+city+"\n Poštanski broj: "+zip+"\n\n\n Količina Shilajita 25g: "+amount25+"\n\n Količina Shilajita 50g: "+amount50+"\n\n Ukupna cijena: "+totalPrice+" KM"+"\n\n\n Poruka: \n"+userMessage;
 
    
-     
+        $("#buy-hero").addClass("gone");
         $("#checkout").addClass("gone");
         $("#loading").removeClass("gone");
      
@@ -223,21 +223,6 @@ $("#buy-btn").click(function(){
 });
 
 
-$("#contact-fail").click(function(){        
-    window.location.href = "contact.html";
-});
-
-$("#home-fail").click(function(){        
-    window.location.href = "index.html";
-});
-
-$("#contact-success").click(function(){        
-    window.location.href = "contact.html";
-});
-
-$("#home-success").click(function(){        
-    window.location.href = "index.html";
-});
 
 
 function getTotal(){
