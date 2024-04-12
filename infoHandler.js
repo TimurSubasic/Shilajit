@@ -28,6 +28,13 @@ $(".benefit-btn").click(function() {
     }, 300); // Change the duration as needed
   });
 
+  $(".questions-btn").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#questions").offset().top
+    }, 300); // Change the duration as needed
+  });
+  
+
 
   var stickyElement = $('.sticky-element');
   var stickyElementOffset = $("#use-section").offset().top;
@@ -42,4 +49,8 @@ $(".benefit-btn").click(function() {
       stickyElement.removeClass('sticky');
       stickyElement.addClass("gone");
     }
+  });
+
+  $('.collapse').on('show.bs.collapse', function () {
+    $('.collapse.show').not(this).collapse('hide');
   });
