@@ -15,6 +15,7 @@ var addressOk = 0;
 var cityOk = 0;
 var zipOk = 0;
 var billOk = 0;
+var zipMistakeCount = 0;
 
 var amount25 = "0";
 var amount50 = "0";
@@ -65,6 +66,7 @@ function checkZip(text) {
   var pattern = /[a-zA-Z]/;
   // Use test() method to check if the pattern exists in the string
   if(pattern.test(text)){
+    zipMistakeCount++;
     return false;
   }
   else{
@@ -72,6 +74,7 @@ function checkZip(text) {
       return true;
     }
     else{
+      zipMistakeCount++;
       return false;
     }
   }
@@ -212,7 +215,11 @@ $("#buy-btn").click(function(){
       setTimeout(function(){
         $("#buy-btn").removeClass("btn-danger");
         $("#buy-btn").text("Naručite");
-      },2600);
+      },2500);
+
+      if (zipMistakeCount >= 2){
+        $("#zip-modal").modal("show");
+      }
 
     }
 
