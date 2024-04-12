@@ -223,3 +223,14 @@ body{
   margin-left: 1px;
   margin-right: 1px;
 }
+
+.sticky-element {
+  position: relative;
+  right: 0;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+}

@@ -59,7 +59,7 @@
               
 
               <div class="btn-group">
-                <a type="button" class="btn btn-outline-info btn-lg px-4 fw-bold" id="use-btn">Upotreba</a>
+                <a type="button" class="btn btn-outline-info btn-lg px-4 fw-bold use-btn">Upotreba</a>
                 <button type="button" class="btn btn-outline-info btn-lg me-sm-3 fw-bold dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="visually-hidden">Toggle Dropdown</span>
                 </button>
@@ -75,9 +75,9 @@
                 </a>
               
                 <ul class="dropdown-menu">
-                  <li><button class="dropdown-item" id="benefit-btn">Benefiti</button></li>
-                  <li><button class="dropdown-item" id="more-info-btn">Dodatne informacije</button></li>                  
-                  <li><button class="dropdown-item" id="price-btn">Cijena</button></li>
+                  <li><button class="dropdown-item benefit-btn">Benefiti</button></li>
+                  <li><button class="dropdown-item more-info-btn">Dodatne informacije</button></li>                  
+                  <li><button class="dropdown-item price-btn">Cijena</button></li>
                 </ul>
               
               
@@ -88,12 +88,26 @@
 
 </section>
 
+<section id="book">
+
+  <div class="dropstart sticky-element gone">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="images/book-svgrepo-com.svg" alt="" height="25px">
+    </button>
+    <ul class="dropdown-menu">
+      <li><button class="dropdown-item use-btn">Upotreba</button></li>
+      <li><button class="dropdown-item benefit-btn">Benefiti</button></li>
+      <li><button class="dropdown-item more-info-btn">Dodatne informacije</button></li>
+      <li><button class="dropdown-item price-btn">Cijena</button></li>
+    </ul>
+  </div>
+
+</section>
 
 
+<section class="py-3">
 
-<section class="py-3" id="use">
-
-    <div class="container my-5">
+    <div class="container my-5 pt-1" id="use">
         <div class="row p-4 pb-0 pe-lg-4 pt-lg-5 align-items-center rounded-5 border shadow-lg  white-back">
           
             <h2 class="display-4 fw-bold lh-1 text-body-emphasis py-3 text-center" id="hero-naslov">Upotreba</h2>
@@ -149,9 +163,9 @@
 
 
 
-<section class="py-3" id="benefites">
+<section class="py-3">
 
-    <div class="container my-5" id="use-cont">
+    <div class="container my-5 pt-1" id="benefites">
         <div class="row p-4 pb-0 pe-lg-4 pt-lg-5 align-items-center rounded-5 border shadow-lg  white-back">
 
 
@@ -239,9 +253,9 @@
 
 
 
-<section class="py-3" id="price">
+<section class="py-3" >
 
-  <div class="container my-5">
+  <div class="container my-5 pt-1" id="price">
     <div class="row p-4 pb-0 pe-lg-4 pt-lg-5 align-items-center rounded-5 border shadow-lg white-back">
     <h2 class="pb-2 py-3 text-center display-4 fw-bold lh-1 text-body-emphasis">Cijena</h2>
 
