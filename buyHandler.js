@@ -65,14 +65,14 @@ function checkZip(text) {
   var pattern = /[a-zA-Z]/;
   // Use test() method to check if the pattern exists in the string
   if(pattern.test(text)){
-    return true;
+    return false;
   }
   else{
     if( text.length == 5 ){
-      return false;
+      return true;
     }
     else{
-      return true;
+      return false;
     }
   }
 }
@@ -134,12 +134,12 @@ function checkBuy(){
     }
     else{
       if(checkZip(zip)){
+        zipOk = 1;
+      }
+      else{
         $("#zip").attr("placeholder", "Potreban je ispravan broj");
         $("#zip").addClass("mistake");
         $("#zip").val("");
-      }
-      else{
-        zipOk = 1;
       }     
     }
 
