@@ -67,6 +67,9 @@ function checkZip(text) {
   // Use test() method to check if the pattern exists in the string
   if(pattern.test(text)){
     zipMistakeCount++;
+    if (zipMistakeCount >= 2){
+      $("#zip-modal").modal("show");
+    }
     return false;
   }
   else{
@@ -75,6 +78,9 @@ function checkZip(text) {
     }
     else{
       zipMistakeCount++;
+      if (zipMistakeCount >= 2){
+        $("#zip-modal").modal("show");
+      }
       return false;
     }
   }
@@ -218,9 +224,7 @@ $("#buy-btn").click(function(){
         $("#buy-btn").text("Naručite");
       },2500);
 
-      if (zipMistakeCount >= 2){
-        $("#zip-modal").modal("show");
-      }
+      
 
     }
 
