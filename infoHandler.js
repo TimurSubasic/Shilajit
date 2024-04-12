@@ -30,7 +30,7 @@ $(".benefit-btn").click(function() {
 
 
   var stickyElement = $('.sticky-element');
-  var stickyElementOffset = $("#use").offset().top;
+  var stickyElementOffset = $("#use-section").offset().top;
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
