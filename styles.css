@@ -55,11 +55,8 @@ body{
 }
 
 
-#SVG{ 
-  background-color: aliceblue;
-  border-radius: 50%;
+#SVG{
   height: 1em;
-  padding: 3px;
 }
 
 #footer{
