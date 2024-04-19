@@ -6,7 +6,7 @@ $("#btn-one").click(function(){
         $("#btn-one").text("Benefiti");
         $("#btn-two").text("Zašto?");
         $("#hero-naslov").text("Šta je Shilajit");
-        $("#hero img").attr("src", "images/stae-shila.png");
+        $("#hero img").attr("src", "images/stae-image.jpg");
     }
     else{
         $("#para-info").text("Tradicionalno se cijeni u ayurvedskoj medicini zbog svojih adaptogenih svojstava, sposobnosti poboljšanja energije, vitalnosti i fizičkog oporavka, kao i podrške za mentalne funkcije. Shilajit se koristi i za unapređenje općeg zdravlja, jačanje imunološkog sistema, poboljšanje seksualnog zdravlja, te kao sredstvo za balansiranje šećera u krvi i smanjenje upalnih procesa u tijelu.");
@@ -25,7 +25,7 @@ $("#btn-two").click(function(){
         $("#btn-one").text("Šta je Shilajit?");
         $("#btn-two").text("Benefiti");
         $("#hero-naslov").text("Zašto čisti shilajit");
-        $("#hero img").attr("src", "images/zasto-shila.png");
+        $("#hero img").attr("src", "images/smola-image.jpg");
     }
     else{
         $("#para-info").text("Tradicionalno se cijeni u ayurvedskoj medicini zbog svojih adaptogenih svojstava, sposobnosti poboljšanja energije, vitalnosti i fizičkog oporavka, kao i podrške za mentalne funkcije. Shilajit se koristi i za unapređenje općeg zdravlja, jačanje imunološkog sistema, poboljšanje seksualnog zdravlja, te kao sredstvo za balansiranje šećera u krvi i smanjenje upalnih procesa u tijelu.");
